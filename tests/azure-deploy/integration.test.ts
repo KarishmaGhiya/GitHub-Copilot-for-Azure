@@ -111,7 +111,7 @@ describeIntegration(`${SKILL_NAME}_ - Integration Tests`, () => {
         let invocationCount = 0;
         for (let i = 0; i < RUNS_PER_PROMPT; i++) {
           const agentMetadata = await agent.run({
-            prompt: "Deploy my app to Azure and verify the live RBAC role assignments are correct after provisioning",
+            prompt: "Deploy my already-prepared app to Azure and verify the live RBAC role assignments are correct after provisioning",
             nonInteractive: true,
             followUp,
             shouldEarlyTerminate: (metadata) => shouldEarlyTerminateForSkillInvocation(metadata, SKILL_NAME)
